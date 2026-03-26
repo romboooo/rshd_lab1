@@ -357,6 +357,30 @@ host    all             all             ::/0                    password
 [postgres2@pg101 ~]$ ls $PGDATA/log
 ```
 
+### Финальная проверка производительности
+
+```bash
+[postgres2@pg101 ~]$ pgbench -h 127.0.0.1 -p 9867 -U postgres2 -c 8 -j 4 -T 30 bench_test2
+```
+
+```bash
+pgbench (16.4)
+starting vacuum...end.
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 10
+query mode: simple
+number of clients: 8
+number of threads: 4
+maximum number of tries: 1
+duration: 30 s
+number of transactions actually processed: 4649
+number of failed transactions: 0 (0.000%)
+latency average = 54.169 ms
+initial connection time = 43.564 ms
+tps = 147.686373 (without initial connection time)
+```
+
+
 ## Этап 3
 
 ### создадим tablespace
