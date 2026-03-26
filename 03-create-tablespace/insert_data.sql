@@ -100,6 +100,7 @@ INSERT INTO articles (title, content) VALUES
     ('Тема 98', 'Описание статьи номер 98'),
     ('Тема 99', 'Описание статьи номер 99'),
     ('Тема 100', 'Описание статьи номер 100');
+    
 
 INSERT INTO comments (article_id, author, body) VALUES
     (1, 'User1', 'Коммент 1'),
@@ -202,5 +203,6 @@ INSERT INTO comments (article_id, author, body) VALUES
     (98, 'User98', 'Коммент 98'),
     (99, 'User99', 'Коммент 99'),
     (100, 'User100', 'Коммент 100');
+
 SELECT * FROM articles;
 SELECT * FROM comments;

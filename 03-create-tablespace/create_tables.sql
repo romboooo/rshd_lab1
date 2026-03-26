@@ -7,7 +7,7 @@ CREATE TABLE articles (
 );
 
 CREATE TABLE comments (
-    id SERIAL,
+    id SERIAL,  
     article_id INTEGER REFERENCES articles(id),
     author TEXT,
     body TEXT
