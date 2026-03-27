@@ -44,15 +44,8 @@
 
 ## Этап 1
 
-### Добавляем переменные окружения
+### Добавляем переменные окружения и инициализируем кластер:
 
-```bash
-rm -rf $HOME/wzo28
-mkdir -p $HOME/wzo28
-chmod 700 $HOME/wzo28
-```
-
-### Инициализируем кластер:
 ```bash
 export PGDATA=$HOME/wzo28
 export LC_ALL=ru_RU.CP1251
